@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet
 {
@@ -20,6 +21,10 @@ public class AddServlet extends HttpServlet
 		int j = Integer.parseInt(req.getParameter("num2"));
 		
 		int k = i + j;
+		
+		HttpSession session = req.getSession();
+		session.setAttribute("k",k);
+		
 		//Session Management.
 		//URL Rewriting.
 		res.sendRedirect("sq?k="+k);
