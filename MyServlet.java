@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/difference-between-servletconfig-and-servletcontext-in-java-servlet/
+
 package com.addition;
 
 import java.io.IOException;
@@ -16,8 +18,8 @@ public class MyServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("Hi ");
 		
-		ServletContext ctx = getServletContext();
-		String str = ctx.getInitParameter("Phone");
+		ServletConfig cg = getServletConfig();
+		String str = cg.getInitParameter("name");
 		out.println(str);
 	}
 }

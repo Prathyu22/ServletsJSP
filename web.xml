@@ -5,6 +5,12 @@
   <servlet>
   	<servlet-name>abc</servlet-name>
   	<servlet-class>com.addition.MyServlet</servlet-class>
+  	
+  	<init-parram>
+  		<param-name> name </param-name>
+  		<param-value> Lakshmi </param-value>
+  	</init-parram>
+  	 		
   </servlet>
   
   <servlet-mapping>
