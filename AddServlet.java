@@ -20,11 +20,14 @@ public class AddServlet extends HttpServlet
 		int j = Integer.parseInt(req.getParameter("num2"));
 		
 		int k = i + j;
-		
 		//Session Management.
-		req.setAttribute("k",k);
+		//URL Rewriting.
+		res.sendRedirect("sq?k="+k);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("sq");
-		rd.forward(req, res);
+		
+		//req.setAttribute("k",k);
+		
+		//RequestDispatcher rd = req.getRequestDispatcher("sq");
+		//rd.forward(req, res);
 	}
 }

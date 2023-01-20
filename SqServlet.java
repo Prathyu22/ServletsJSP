@@ -11,9 +11,11 @@ public class SqServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
 		//req object return object so we typecast here.
-		int k = (int) req.getAttribute("k");
+		int k = Integer.parseInt(req.getParameter("k"));
 		k = k*k;
 		PrintWriter out = res.getWriter();
 		out.println("Result is "+k);
+		
+		System.out.println("sq called");
 	}
 }
