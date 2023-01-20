@@ -9,13 +9,23 @@
 <body bgcolor="cyan">
 
 <!-- Put the java code in the delimiters. -->
-	<%
-		int i = Integer.parseInt(request.getParameter("num1"));
-		int j = Integer.parseInt(request.getParameter("num2"));
-		
-		int k = i+j;
-		out.println("Output: "+k);
+
+    <!-- Decalaration -->
+	<%!
+		int coef = 3;
 	%>
+	
+	<h1> Hello World </h1>
+	
+	<!-- Scriptlet Tags  -->
+	<%
+		int i = 9;
+		out.println(7+5);
+	%>
+	
+	
+	<!-- Expression -->
+	My fav Number is : <%= coef %>
 
 </body>
 </html>
