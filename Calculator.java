@@ -24,6 +24,11 @@ public class Calculator {
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
+	public String toString() {
+		return "Calculator [num1=" + num1 + ", num2=" + num2 + "]";
+	}
+
 	public int getNum2() {
 		return num2;
 	}
