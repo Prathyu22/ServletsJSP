@@ -1,0 +1,26 @@
+This is to get an idea on IOC container shutting down.
+And the order of objects and methods execution.
+
+OUTPUT:
+
+Calculator Default constructor Calculator invoked
+I will execute before object Calculator initialization
+Calculator Parameterized constructor Calculator invoked
+I will execute before object Calculator initialization
+Person Default constructor invoked
+I will execute before object Person initialization
+30
+-10
+200
+0
+10
+------------------------------
+45
+5
+500
+1
+5
+I will execute before object Person destruction
+I will execute before object Calculator destruction
+I will execute before object Calculator destruction
+

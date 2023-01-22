@@ -1,4 +1,5 @@
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CalculatorTest {
@@ -22,5 +23,11 @@ public class CalculatorTest {
 		System.out.println(calculatorByConstructorInjection.multiplication());
 		System.out.println(calculatorByConstructorInjection.division());
 		System.out.println(calculatorByConstructorInjection.modulo());
+		
+		//Shutting down IOC container using below.
+		ConfigurableApplicationContext applicationContext2 = (ConfigurableApplicationContext)applicationContext;
+				
+		//To shut down IOC container.
+		applicationContext2.registerShutdownHook(); //IOC container will close everything automatically.
 	}
 }

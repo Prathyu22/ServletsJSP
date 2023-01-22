@@ -1,11 +1,7 @@
 
 
 public class Calculator {
-	public Calculator() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	private int num1; //these values will work as independent.
 
 	//generated getters and setters.
@@ -13,6 +9,21 @@ public class Calculator {
 		return num1;
 	}
 
+	private int num2;
+	
+	public void executeFirst() {
+		System.out.println("I will execute before object Calculator initialization");
+	}
+	
+	public void executeBeforeDestroy() {
+		System.out.println("I will execute before object Calculator destruction");
+	}
+	
+	public Calculator() {
+		System.out.println("Calculator Default constructor Calculator invoked");
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getNum2() {
 		return num2;
 	}
@@ -24,9 +35,10 @@ public class Calculator {
 	public void setNum1(int num1) {
 		this.num1 = num1;
 	}
-	private int num2;
+	
 	
 	public Calculator(int num1, int num2) {
+		System.out.println("Calculator Parameterized constructor Calculator invoked");
 		this.num1 = num1;
 		this.num2 = num2;
 	}
