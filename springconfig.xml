@@ -61,6 +61,15 @@
 				<value>All of the above.</value>
 			</set>
 		</property>
+		
+		<property name="answers2">
+			<map>
+				<entry key="ans1" value="Java is an Island."> </entry>
+				<entry key="ans2" value="Java is a Coffee."> </entry>
+				<entry key="ans3" value="Java is a programming language."> </entry>
+				<entry key="ans4" value="All of the above."> </entry>
+			</map>
+		</property>
 	</bean>
 	
 </beans>

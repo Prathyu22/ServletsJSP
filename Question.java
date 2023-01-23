@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,6 +16,7 @@ public class Question {
 
 	private List<String> answers;
 	private Set<String> answers1;
+	private Map<String, String> answers2;
 	
 	/*public Question(int id, String name, List<String> answers) {
 		super();
@@ -22,6 +24,14 @@ public class Question {
 		this.name = name;
 		this.answers = answers;
 	}*/
+
+	public Map<String, String> getAnswers2() {
+		return answers2;
+	}
+
+	public void setAnswers2(Map<String, String> answers2) {
+		this.answers2 = answers2;
+	}
 
 	public int getId() {
 		return id;
