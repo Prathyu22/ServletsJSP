@@ -1,17 +1,27 @@
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Question {
 	private int id;
 	private String name;
+	public Set<String> getAnswers1() {
+		return answers1;
+	}
+
+	public void setAnswers1(Set<String> answers1) {
+		this.answers1 = answers1;
+	}
+
 	private List<String> answers;
+	private Set<String> answers1;
 	
-	public Question(int id, String name, List<String> answers) {
+	/*public Question(int id, String name, List<String> answers) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.answers = answers;
-	}
+	}*/
 
 	public int getId() {
 		return id;

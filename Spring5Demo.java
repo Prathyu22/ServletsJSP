@@ -9,6 +9,7 @@ public class Spring5Demo {
 		System.out.println(person.getAnswers());
 		System.out.println(person.getId());
 		System.out.println(person.getName());
+		System.out.println(person.getAnswers1());
 		
 		//Shutting down IOC container using below.
 		ConfigurableApplicationContext applicationContext2 = (ConfigurableApplicationContext)applicationContext;

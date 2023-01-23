@@ -21,14 +21,46 @@
 		<constructor-arg type="int" value="20" index="1"> </constructor-arg>
 		<constructor-arg type="int" value="25" index="0"> </constructor-arg>
 	</bean>
-	
+
 	<bean class="Person" name="p" init-method="executeFirst" destroy-method="executeBeforeDestroy" autowire="byName">
 		<property name="pid" value="100"> </property>
 		<property name="pName" value="Prathyusha Veturi"> </property>
 		<property name="paid" value="true"> </property>
 		<property name="salary" value="500"> </property>
 		<property name="age" value="30"> </property>
-		<!-- When we use autowiring, we need not use the below statement. -->
+		<!-- When we use autowiring, we need not use the below statement.-->
 		<!--  <property name="calculator" ref="calclass"> </property> -->
+	</bean> 
+	
+	<!-- Auto wiring byType -->
+	<!-- <bean class="Employee" name="employee" init-method="executeFirst" destroy-method="executeBeforeDestroy" autowire="byType">
+		<property name="pid" value="100"> </property>
+		<property name="pName" value="Prathyusha Veturi"> </property>
+		<property name="paid" value="true"> </property>
+		<property name="salary" value="500"> </property>
+		<property name="age" value="30"> </property>
+	</bean> -->
+	
+	<bean class="Question" id="question">
+		<property name="id" value="11"> </property>
+		<property name="name" value="What is Java?"> </property>
+		<property name="answers">
+			<list>
+				<value>Java is an Island.</value>
+				<value>Java is a Coffee.</value>
+				<value>Java is a programming language.</value>
+				<value>All of the above.</value>
+			</list>
+		</property>
+		
+		<property name="answers1">
+			<set>
+				<value>Java is an Island.</value>
+				<value>Java is a Coffee.</value>
+				<value>Java is a programming language.</value>
+				<value>All of the above.</value>
+			</set>
+		</property>
 	</bean>
+	
 </beans>
